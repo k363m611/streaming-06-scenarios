@@ -1,4 +1,4 @@
-"""src/streaming/kafke_producer_case.py - Kafka producer example.
+"""src/streaming/kafke_producer_mcgaughey.py - Kafka producer example.
 
 Reads sales from data/sales.csv,
 validates them against the data contract,
@@ -11,12 +11,12 @@ Work up to see how it all fits together.
 Many functions are standard helpers
 and should not need project-specific modifications.
 
-Author: Denise Case
+Author: Denise mcgaughey
 Date: 2026-05
 
 Terminal command to run this file from the root project folder:
 
-    uv run python -m streaming.kafka_producer_case
+    uv run python -m streaming.kafka_producer_mcgaughey
 
 OBS:
   Don't edit this file - it should remain a working example.
@@ -49,13 +49,13 @@ from datafun_toolkit.logger import get_logger, log_header, log_path
 from dotenv import load_dotenv
 
 from streaming.core.utils import log_env_vars
-from streaming.data_validation.data_contract_case import (
+from streaming.data_validation.data_contract_mcgaughey import (
     PRODUCTS_REQUIRED_FIELDS,
     REGIONS_REQUIRED_FIELDS,
     REJECTED_SALES_FIELDNAMES,
     validate_sale_record,
 )
-from streaming.data_validation.data_validation_case import (
+from streaming.data_validation.data_validation_mcgaughey import (
     add_validation_errors,
     make_lookup_set,
     validate_reference_records,
