@@ -1,4 +1,4 @@
-"""src/streaming/kafka_consumer_case.py.
+"""src/streaming/kafka_consumer_mcgaughey.py.
 
 Kafka consumer: full pipeline example.
 
@@ -14,12 +14,12 @@ Work up to see how it all fits together.
 Many functions are standard helpers
 and should not need project-specific modifications.
 
-Author: Denise Case
+Author: Denise mcgaughey
 Date: 2026-05
 
 Terminal command to run this file from the root project folder:
 
-    uv run python -m streaming.kafka_consumer_case
+    uv run python -m streaming.kafka_consumer_mcgaughey
 
 OBS:
   Don't edit this file - it should remain a working example.
@@ -51,13 +51,13 @@ from dotenv import load_dotenv
 
 from streaming.core.utils import log_env_vars
 from streaming.data_engineering.derived_fields import enrich_message
-from streaming.data_validation.data_contract_case import (
+from streaming.data_validation.data_contract_mcgaughey import (
     CONSUMED_FIELDNAMES,
     SALES_REQUIRED_FIELDS,
     validate_required_fields,
 )
-from streaming.storage.storage_case import init_db, write_valid_record
-from streaming.visualizations.live_visualizations_case import (
+from streaming.storage.storage_mcgaughey import init_db, write_valid_record
+from streaming.visualizations.live_visualizations_mcgaughey import (
     close_live_chart,
     init_live_chart,
     save_live_chart,
@@ -87,7 +87,7 @@ OUTPUT_DIR: Final[Path] = DATA_DIR / "output"
 
 OUTPUT_CSV: Final[Path] = OUTPUT_DIR / "consumed_sales.csv"
 OUTPUT_DB: Final[Path] = OUTPUT_DIR / "sales.duckdb"
-OUTPUT_CHART: Final[Path] = OUTPUT_DIR / "sales_chart_case.png"
+OUTPUT_CHART: Final[Path] = OUTPUT_DIR / "sales_chart_mcgaughey.png"
 
 REGIONS_CSV: Final[Path] = DATA_DIR / "regions.csv"
 PRODUCTS_CSV: Final[Path] = DATA_DIR / "products.csv"
